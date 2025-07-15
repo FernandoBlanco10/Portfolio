@@ -44,3 +44,20 @@ function toggleMenu() {
   nav.classList.toggle('show');
 }
 //**************************************************************
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".slider").forEach((slider) => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
+
+    if (images.length > 1) {
+      images[index].classList.add("active");
+
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 3000); // Cambia cada 3 segundos
+    }
+  });
+});

@@ -300,12 +300,13 @@ section {
 }
 
 /* Responsivo */
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .hero-content {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
+
 }
 
 /* ***************************************************************************************************************** */
@@ -382,6 +383,8 @@ section {
   .about-image {
     max-width: 100%;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .about-text h2,
@@ -785,6 +788,7 @@ ul li {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
   text-align: center;
+  font-size: 20px;
 }
 
 /* Responsivo */
@@ -814,11 +818,10 @@ ul li {
 .contacto-subtitle {
   color: #cbd5e1;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .contacto-links {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contacto-descripciones {
@@ -834,6 +837,32 @@ ul li {
   text-align: left;
 }
 
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .hero-text h3 {
+    padding-right: 0;
+    padding-bottom: 0;
+    font-size: 1.2rem
+  }
+
+  .hero-text p {
+    padding-right: 0;
+    margin-right: 0;
+    font-size: 0.9rem;
+  }
+
+  .hero-links {
+    font-size: ;
+    gap: 0.5rem;
+  }
+  
+}
 
 /* ***************************************************************************************************************** */
 /* FOOTER */

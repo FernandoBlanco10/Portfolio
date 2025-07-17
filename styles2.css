@@ -100,7 +100,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -115,8 +115,8 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 1.7rem;
-  flex-wrap: wrap;
+  gap: 1.8rem;
+  flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
 }
@@ -145,6 +145,10 @@ nav {
     padding: 10px 20px;
   }
 
+  .body {
+    width: 75%; /* Ajusta el padding superior para evitar que el contenido se superponga al header */
+  }
+
   nav {
     display: flex;
     justify-content: space-between; /* Logo a la izquierda, toggle a la derecha */
@@ -161,8 +165,8 @@ nav {
   }
 
   .nav-links a {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 18px;
+    padding: 4px;
     text-align: center;
     width: 100%;
   }
@@ -205,7 +209,7 @@ section {
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
   margin-top: 2rem;
-  max-width: 1000px;
+  max-width: 900px;
   max-height: fit-content;
   margin-inline: auto;
   align-items: stretch;
@@ -253,28 +257,15 @@ section {
   margin-bottom: 1rem;
 }
 
-.project-card img {
-  width: 80%; /* o por ejemplo: 300px */
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .project-card p {
   color: #bbb;
   font-size: 0.95rem;
   line-height: 1.6;
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
 }
 
 .tech-icons {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -302,7 +293,11 @@ section {
 
 @media (max-width: 768px) {
   .projects {
-    grid-template-columns: 1fr; /* ✅ 1 tarjeta por fila en móviles */
+    grid-template-columns: 1fr;
+  }
+
+  .project-card{
+    height: 100%;
   }
 }
 
@@ -326,25 +321,35 @@ section {
 
 .slider {
   position: relative;
-  width: 100%;
-  height: 400px;
+  width: 70%;
+  height: 300px;
   overflow: hidden;
   border-radius: 10px;
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 .slider img {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit:fill;
+  padding-bottom: 0px;
+  object-fit: cover;
   object-position: center;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .slider img.active {
   opacity: 1;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 100%;
+    height: 70%;
+  }
 }
 
 /* FOOTER */

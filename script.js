@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         images[index].classList.remove("active");
         index = (index + 1) % images.length;
         images[index].classList.add("active");
-      }, 3000); // Cambia cada 3 segundos
+      }, 3500); // Cambia cada 3 segundos
     }
   });
 });

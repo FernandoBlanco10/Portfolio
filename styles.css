@@ -386,6 +386,7 @@ section {
   margin-bottom: 1rem;
 }
 
+
 .project-card .info {
   border-top: 1px solid #333;
   padding-top: 1rem;
@@ -453,7 +454,7 @@ section {
   color: #cbd5e1;
   border-radius: 40px;
   font-size: 1.0rem;
-  transition: transform 0.3s ease, background 0.3s ease;  
+  transition: transform 0.3s ease;  
 }
 
 .btn:hover {
@@ -465,6 +466,25 @@ section {
 @media (max-width: 768px) {
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    min-height: 400px; /* Ajusta la altura mínima para pantallas más pequeñas */
+  }
+
+  .project-card img {
+    height: 150px; /* Ajusta la altura de la imagen para pantallas más pequeñas */
+    aspect-ratio: 20 / 9;  
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem; /* Reduce el tamaño del título */
+  }
+
+  .project-card p {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
   }
 }
 

@@ -122,10 +122,11 @@ nav {
 }
 
 .nav-links a {
-  color: rgb(202, 202, 202);
+  font-size: 1.5rem; /* ajusta tamaño */
+  color: var(--primary-color);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-links a:hover {
@@ -133,12 +134,7 @@ nav {
   text-shadow: 0 0 15px #523abb;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  padding-right: 20px;
-  cursor: pointer;
-}
+
 
 @media (max-width: 768px) {
   header {
@@ -155,35 +151,10 @@ nav {
     align-items: center;
     padding: 0 1rem;
   }
-
-  .nav-links {
-    transition: all 0.3s ease-in-out;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
+  nav a{
+    font-size: 2rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */ 
   }
 
-  .nav-links a {
-    font-size: 18px;
-    padding: 4px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .nav-links.show {
-    z-index: 1000;
-    margin-top: 0;
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    padding: 10px;
-    background: transparent;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
 
 /* ***************************************************************************************************************** */
@@ -265,6 +236,12 @@ section {
 
 }
 
+.project-card a {
+  width: 90px;
+  align-self: center;
+
+}
+
 .tech-icons {
   margin-top: 1rem;
   display: flex;
@@ -289,6 +266,25 @@ section {
 .tech-icons img:hover {
   transform: scale(1.2);
   filter: brightness(1.5);
+}
+
+.btn-visitar {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color:#1d1f56;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.btn-visitar:hover {
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
 }
 
 

@@ -695,6 +695,105 @@ section {
 }
 
 /* ***************************************************************************************************************** */
+/* CURSOS */
+
+.cursos {
+  padding: 2rem 2rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cursos h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-top: 3.9rem;
+  margin-bottom: 2rem;
+}
+
+.cursos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.curso-item {
+  background: #111829;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+.curso-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+}
+.certificado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+
+.certificado img {
+  width: 150px;       /* ancho fijo */
+  height: 100px;      /* alto fijo */
+  object-fit: cover;  /* recorta para llenar el espacio sin deformar */
+  border-radius: 8px;
+  background-color: white;
+  padding: 0px;
+  margin-bottom: 1rem;
+}
+
+.info-curso h3 {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin: 0 0 0.3rem 0;
+  text-align: center;
+}
+
+.info-curso .fecha {
+  font-size: 0.85rem;
+  color: #7f8fa4;
+  text-align: center;
+  margin: 0;
+}
+
+.curso-item[href] {
+  cursor: pointer;
+}
+
+
+/* Responsivo */
+
+@media (max-width: 480px) {
+  .cursos-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .certificado img {
+    max-height: 90px;
+  }
+
+  .info-curso h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* ***************************************************************************************************************** */
 /* HABILIDADES */
 
 .skills-grid {
